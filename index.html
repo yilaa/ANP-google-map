@@ -32,10 +32,11 @@
       
       //Add marker
       map.data.setStyle(function(feature) {
-        //var tot2018 = Math.exp(parseFloat(feature.getProperty('Total 2018'))) * 0.1;
-          //return /** @type {google.maps.Data.StyleOptions} */({
+        var tot2018 = 5;
+          return /** @type {google.maps.Data.StyleOptions} */({
             icon: {
               path: google.maps.SymbolPath.CIRCLE,
+              scale: tot2018,
               fillColor: '#f00',
               fillOpacity: 0.35,
               strokeWeight: 0
