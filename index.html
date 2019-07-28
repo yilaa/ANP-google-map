@@ -17,12 +17,11 @@
   <div id="map"></div>
   <script>
     function initMap(){
-      // Map options
-      var options = {
-        zoom:6,
-        center:{lat:-9.900395,lng:-76.227201}
-      }
-
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: -9.900395, lng: -76.227201 },
+          zoom: 2
+        });
+   
       // Add geojson
       map.data.loadGeoJson('ANP_puntos_data.geojson');
       
