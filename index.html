@@ -43,15 +43,15 @@
           };
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
           var color="#cc4c02";
-          var opacidad=0.75;
+          var opacidad=0.80;
           var circulo="#cc4c02";
           } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
           var color="#f2a13f";
-          var opacidad=0.80;
+          var opacidad=0.90;
           var circulo="#f2a13f";
           } else if (parseFloat(feature.getProperty('Total 2018'))>50000){
           var color="#fadd98";
-          var opacidad=0.80;
+          var opacidad=0.90;
           var circulo="#fadd98";
           } else {
           var color="#f00";
@@ -65,7 +65,7 @@
               fillColor: color,
               fillOpacity: opacidad,
               strokeColor: circulo,
-              strokeWeight: 1
+              strokeWeight: 0.7
         }
        });
       });
