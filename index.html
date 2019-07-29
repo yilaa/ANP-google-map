@@ -32,7 +32,11 @@
       
       //Add marker
       map.data.setStyle(function(feature) {
-      var tot2018 = Math.sqrt(parseFloat(feature.getProperty('Total 2018')))*0.05;
+      if (parseFloat(feature.getProperty('Total 2018'))>1000){
+          var tot2018 = Math.sqrt(parseFloat(feature.getProperty('Total 2018')))*0.05;
+          } else {
+          var tot2018 =1.5;
+          };
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
           var color="#f00";
           var opacidad=0.50;
@@ -52,7 +56,7 @@
               scale: tot2018,
               fillColor: color,
               fillOpacity: opacidad,
-              strokeWeight: 0
+              strokeWeight: 1
         }
        });
       });
