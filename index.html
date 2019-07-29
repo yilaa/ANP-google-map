@@ -324,11 +324,13 @@
       });
       // Set mouseover event for each feature.
         map.data.addListener('mouseover', function(event) {
-          var infowindow = new google.maps.InfoWindow({
-    content: "hola es una prueba"
+          var feat = event.feature;
+          var contenido = "<b>"+feat.getProperty('name')+"</b><br>"+"Total 2018: "+feat.getProperty('Total 2018');
+          infowindow.setContent(contenido);
+          infowindow.setPosition(event.latLng);
+          infowindow.open(map);
          });
-         infowindow.open(); 
-        });
+     
     }
   </script>
   <script async defer
