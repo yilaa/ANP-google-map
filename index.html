@@ -325,8 +325,8 @@
       var infowindow = new google.maps.InfoWindow();
       // Set mouseover event for each feature.
         map.data.addListener('mouseover', function(event) {
-          var feat = event.feature;
-          var contenido = "<b>"+feat.getProperty('name')+"</b><br>"+"Total 2018: "+feat.getProperty('Total 2018');
+          var anp = event.feature;
+          var contenido = "<b>"+anp.getProperty('name')+"</b><br>"+"Total 2018: "+anp.getProperty('Total 2018')+"</b><br>"+"Extranjeros 2018: "+anp.getProperty('% Extranjeros 2018')+"</b><br>"+"Nacionales 2018: "+anp.getProperty('% Nacionales 2018');
           infowindow.setContent(contenido);
           infowindow.setPosition(event.latLng);
           infowindow.open(map);
