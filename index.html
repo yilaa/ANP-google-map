@@ -323,21 +323,21 @@
           var tot2018 =1.5;
           };
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
+          var color="#f00";
+          var opacidad=0.60;
+          var circulo="#f00#cc4c02";
+          } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
           var color="#cc4c02";
           var opacidad=0.80;
           var circulo="#cc4c02";
-          } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
-          var color="#f2a13f";
-          var opacidad=0.90;
-          var circulo="#f2a13f";
           } else if (parseFloat(feature.getProperty('Total 2018'))>50000){
+          var color="#f2a13f";
+          var opacidad=0.9;
+          var circulo="#f2a13f";
+          } else {
           var color="#fadd98";
           var opacidad=1;
           var circulo="#fadd98";
-          } else {
-          var color="#f00";
-          var opacidad=0.50;
-          var circulo="#f00";
           };
           return /** @type {google.maps.Data.StyleOptions} */({
             icon: {
@@ -362,7 +362,7 @@
       
       // Leyenda
       var legend = document.getElementById('legend');
-      legend.innerHTML = '<b>'+'<h1>Visitantes a 45 ANP en 2018:</h1>'+'</b><br>'+'<i style="background:#cc4c02; opacity: 0.8"></i>'+'Mayor a 300,000'+'</b><br></b><br>'+'<i style="background:#f2a13f; opacity: 0.9"></i>'+' Entre 100,00 a 200,00'+'</b><br></b><br>'+'<i style="background:#fadd98; opacity: 1"></i>'+' Entre 50,000 a 100,000'+'</b><br></b><br>'+'<i style="background:#f00; opacity: 0.5"></i>'+' Menor a 50,000';
+      legend.innerHTML = '<b>'+'<h1>Visitantes a 45 ANP en 2018:</h1>'+'</b><br>'+'<i style="background:#f00; opacity: 0.6"></i>'+'Mayor a 300,000'+'</b><br></b><br>'+'<i style="background:#cc4c02; opacity: 0.8"></i>'+' Entre 100,00 a 200,00'+'</b><br></b><br>'+'<i style="background:#f2a13f; opacity: 0.9"></i>'+' Entre 50,000 a 100,000'+'</b><br></b><br>'+'<i style="background:#fadd98; opacity: 1"></i>'+' Menor a 50,000';
       map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);    
      
     }
