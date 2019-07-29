@@ -19,6 +19,16 @@
      #legend h3 {
         margin-top: 0;
       }
+    #title-map {
+      margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
     html, body {
         height: 100%;
         margin: 0;
@@ -28,7 +38,7 @@
 </head>
 <body>
   <div id="map"></div>
-  <h1>ANP visitantes</h1>
+  <div id="title-map"><h1>ANP visitantes</h1></div>
   <div id="legend"><h3>Legend</h3></div>
   <script>
     function initMap(){
