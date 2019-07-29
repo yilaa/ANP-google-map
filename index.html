@@ -326,7 +326,7 @@
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
           var color="#a72461";
           var opacidad=0.80;
-          var circulo="#a72461";
+          var circulo="#ffffff";
           } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
           var color="#cc4c02";
           var opacidad=0.80;
@@ -363,8 +363,8 @@
       
       // Leyenda
       var legend = document.getElementById('legend');
-      legend.innerHTML = '<b>'+'<h1>Visitantes a 45 ANP en 2018:</h1>'+'</b><br>'+'<i style="background:#f00; opacity: 0.6"></i>'+'Mayor a 300,000'+'</b><br></b><br>'+'<i style="background:#cc4c02; opacity: 0.8"></i>'+' Entre 100,00 a 200,00'+'</b><br></b><br>'+'<i style="background:#f2a13f; opacity: 0.9"></i>'+' Entre 50,000 a 100,000'+'</b><br></b><br>'+'<i style="background:#fadd98; opacity: 1"></i>'+' Menor a 50,000';
-      map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);    
+      legend.innerHTML = '<b>'+'<h1>Visitantes 2018:</h1>'+'</b><br>'+'<i style="background:#a72461; opacity: 0.8"></i>'+'<h4>Mayor a 300,000</h4>'+'</b><br></b><br>'+'<i style="background:#cc4c02; opacity: 0.8"></i>'+' Entre 100,00 a 200,00'+'</b><br></b><br>'+'<i style="background:#f2a13f; opacity: 0.95"></i>'+' Entre 50,000 a 100,000'+'</b><br></b><br>'+'<i style="background:#f00; opacity: 1"></i>'+' Menor a 50,000';
+      map.controls[google.maps.ControlPosition.LEFT_CENTER].push(legend);    
      
     }
   </script>
