@@ -35,12 +35,16 @@
       var tot2018 = Math.sqrt(parseFloat(feature.getProperty('Total 2018')))*0.05;
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
           var color="#f00";
+          var opacidad=0.50;
           } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
           var color="#fe9929";
+          var opacidad=0.60;
           } else if (parseFloat(feature.getProperty('Total 2018'))>50000){
           var color="#fed98e";
+          var opacidad=0.70;
           } else {
           var color="#cc4c02";
+          var opacidad=0.80;
           };
           return /** @type {google.maps.Data.StyleOptions} */({
             icon: {
