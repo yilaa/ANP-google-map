@@ -41,10 +41,10 @@
           var color="#f00";
           var opacidad=0.50;
           } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
-          var color="#fe9929";
+          var color="#fed98e";
           var opacidad=0.60;
           } else if (parseFloat(feature.getProperty('Total 2018'))>50000){
-          var color="#fed98e";
+          var color="#fe9929";
           var opacidad=0.70;
           } else {
           var color="#cc4c02";
@@ -56,7 +56,7 @@
               scale: tot2018,
               fillColor: color,
               fillOpacity: opacidad,
-              strokeWeight: 1
+              strokeWeight: 0.5
         }
        });
       });
