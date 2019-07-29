@@ -345,7 +345,7 @@
        });
       });
       var infowindow = new google.maps.InfoWindow();
-      // Set mouseover event for each feature.
+      // Set ventana de información en mouseover
         map.data.addListener('mouseover', function(event) {
           var anp = event.feature;
           var contenido = "<b>"+anp.getProperty('name')+"</b><br>"+"Total 2018: "+anp.getProperty('Total 2018')+"</b><br>"+"Extranjeros 2018: "+anp.getProperty('% Extranjeros 2018')+"</b><br>"+"Nacionales 2018: "+anp.getProperty('% Nacionales 2018');
@@ -353,6 +353,12 @@
           infowindow.setPosition(event.latLng);
           infowindow.open(map);
          });
+      
+      // Leyenda
+      var legend = document.getElementById('legend');
+      div.innerHTML = 'soy una leyenda';
+      legend.appendChild(div);
+      map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);    
      
     }
   </script>
