@@ -7,9 +7,13 @@
   <title>ANP visitantes</title>
   <style>
     #map{
-      height:600px;
-      width:100%;
+      height: 100%;
     }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
   </style>
 </head>
 <body>
@@ -39,15 +43,16 @@
           };
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
           var color="#cc4c02";
-          var opacidad=0.70;
+          var opacidad=0.75;
           var circulo="#cc4c02";
           } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
           var color="#fe9929";
-          var opacidad=0.60;
+          var opacidad=0.70;
           var circulo="#fe9929";
           } else if (parseFloat(feature.getProperty('Total 2018'))>50000){
           var color="#fed98e";
           var opacidad=0.70;
+          var circulo="#fed98e";
           } else {
           var color="#f00";
           var opacidad=0.70;
@@ -60,7 +65,7 @@
               fillColor: color,
               fillOpacity: opacidad,
               strokeColor: circulo,
-              strokeWeight: 0.5
+              strokeWeight: 1
         }
        });
       });
