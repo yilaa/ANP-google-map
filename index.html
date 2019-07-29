@@ -325,20 +325,20 @@
           };
       if (parseFloat(feature.getProperty('Total 2018'))>300000){
           var color="#a72461";
-          var opacidad=0.70;
+          var opacidad=0.80;
           var circulo="#a72461";
           } else if (parseFloat(feature.getProperty('Total 2018'))>100000){
-          var color="#dc5353";
+          var color="#cc4c02";
           var opacidad=0.70;
-          var circulo="#dc5353";
+          var circulo="#cc4c02";
           } else if (parseFloat(feature.getProperty('Total 2018'))>50000){
-          var color="#ff935c";
-          var opacidad=0.7;
-          var circulo="#ff935c";
+          var color="#f2a13f ";
+          var opacidad=0.8;
+          var circulo="#f2a13f ";
           } else {
-          var color="#f9e090";
-          var opacidad=1;
-          var circulo="#f9e090";
+          var color="#f00";
+          var opacidad=0.5;
+          var circulo="#f00";
           };
           return /** @type {google.maps.Data.StyleOptions} */({
             icon: {
